@@ -1,0 +1,18 @@
+{
+  "name": "dok-ts-email-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kalyuk/dok-ts-email-service.git",
+  "author": "Dmitry Kalyuk <dmitry@kalyuk.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "dok-ts": "^1.0.31"
+  },
+  "dependencies": {
+    "nodemailer": "^4.4.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "yarn build"
+  }
+}
