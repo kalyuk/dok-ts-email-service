@@ -14,7 +14,10 @@ export class EmailService extends BaseService {
 
   public send(data) {
     return new Promise((resolve) => {
-      this.sender.sendMail(data, (err, info) => {
+      this.sender.sendMail({
+        from: this.config.from,
+        ... data
+      }, (err, info) => {
         if (err) {
           throw new Error(JSON.stringify(err));
         }
