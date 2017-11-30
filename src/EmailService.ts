@@ -9,7 +9,7 @@ export class EmailService extends BaseService {
 
   public init() {
     super.init();
-    this.sender = nodemailer.createTransport(this.transport);
+    this.sender = nodemailer.createTransport(this.config.transport);
   }
 
   public send(data) {
